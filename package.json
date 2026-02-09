@@ -1,7 +1,7 @@
 {
   "name": "expo-semver-boilerplate",
   "main": "expo-router/entry",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "repository": {
     "url": "https://github.com/eristich/expo-semver-boilerplate"
   },

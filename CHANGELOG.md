@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2](https://github.com/eristich/expo-semver-boilerplate/compare/v1.2.1...v1.2.2) (2026-02-09)
+
+### Bug Fixes
+
+* lsjkdskjds ([a06393b](https://github.com/eristich/expo-semver-boilerplate/commit/a06393b37f72f2cb95aa0c3c590d1175494ea15e))
+
 ## [1.2.1](https://github.com/eristich/expo-semver-boilerplate/compare/v1.2.0...v1.2.1) (2026-02-09)
 
 ### Bug Fixes
