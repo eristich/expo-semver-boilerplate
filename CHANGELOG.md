@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://github.com/eristich/expo-semver-boilerplate/compare/v1.2.0...v1.2.1) (2026-02-09)
+
+### Bug Fixes
+
+* kjshjdhqdhsq ([98c6f1b](https://github.com/eristich/expo-semver-boilerplate/commit/98c6f1b429ee89cf6e55c79bc8f7b9dc7d3087f1))
+
 ## [1.2.0](https://github.com/eristich/expo-semver-boilerplate/compare/v1.1.0...v1.2.0) (2026-02-09)
 
 ### Features
