@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/eristich/expo-semver-boilerplate/compare/v1.1.0...v1.2.0) (2026-02-09)
+
+### Features
+
+* lshdus ([9fe60ba](https://github.com/eristich/expo-semver-boilerplate/commit/9fe60ba177c963aa7a4cf55fc5bb8dbdaa220c33))
+
 ## [1.1.0](https://github.com/eristich/expo-semver-boilerplate/compare/v1.0.0...v1.1.0) (2026-02-08)
 
 ### Features
