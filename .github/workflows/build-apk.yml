@@ -20,16 +20,44 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Generate cache key from dependencies only
+        id: node-deps-cache
+        run: |
+          # Extraire uniquement les dépendances du package-lock.json (sans la version du projet)
+          cat package-lock.json | jq 'del(.version, .packages[""].version)' > /tmp/deps-only.json
+          echo "hash=$(sha256sum /tmp/deps-only.json | cut -d' ' -f1)" >> $GITHUB_OUTPUT
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24.13
-          cache: npm
+          package-manager-cache: false
+
+      - name: Cache node modules
+        uses: actions/cache@v5
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ steps.node-deps-cache.outputs.hash }}
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 17
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+
+      - name: Cache Gradle
+        uses: actions/cache@v5
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: gradle-${{ runner.os }}-
 
       - name: Setup EAS CLI
         uses: expo/expo-github-action@v8
